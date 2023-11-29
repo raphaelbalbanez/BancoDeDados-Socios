@@ -10,6 +10,7 @@ Este projeto foi desenvolvido como parte da disciplina de banco de dados, onde i
 ## Tecnologias Utilizadas:
 - *Flask:* O framework web utilizado para desenvolver o sistema.
 - *MySQL:* O sistema de gerenciamento de banco de dados escolhido para armazenar e recuperar os dados.
+- *DBVisualizer:* Ferramenta utilizada para visualizar e interagir com o banco de dados de maneira gráfica.
 - *Diagrama Relacional e Lógico:* Utilizamos ferramentas apropriadas para criar representações visuais da estrutura do banco de dados.
 
 Esperamos que este projeto não apenas cumpra os requisitos da disciplina, mas também sirva como um exemplo prático de integração eficiente entre sistemas web e bancos de dados. Sinta-se à vontade para explorar e adaptar o código conforme necessário.
