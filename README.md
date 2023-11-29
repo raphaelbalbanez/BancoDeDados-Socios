@@ -3,7 +3,7 @@
 Este projeto foi desenvolvido como parte da disciplina de banco de dados, onde implementamos um sistema de cadastro de sócios para um clube utilizando Flask. O trabalho foi construído desde o início, abrangendo a criação do sistema, a integração em tempo real com um banco de dados MySQL e a elaboração de diagramas relacional e lógico.
 
 ## Funcionalidades Destacadas:
-- *Cadastro de Sócios:* Desenvolvemos um sistema completo de cadastro de sócios, permitindo a inclusão de informações detalhadas.
+- *Cadastro de Sócios:* Desenvolvemos um sistema completo de cadastro de sócios, contendo edições,filtros e buscas avançadas...Permitindo tambem a inclusão de informações detalhadas.
 - *Integração em Tempo Real:* Todas as funcionalidades foram integradas de forma dinâmica com o banco de dados MySQL, garantindo atualizações em tempo real.
 - *Modelagem Relacional e Lógica:* Antes da implementação, dedicamos tempo à criação de diagramas para representar a estrutura do banco, garantindo uma abordagem sólida e bem planejada.
 
