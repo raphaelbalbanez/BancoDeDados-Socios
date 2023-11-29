@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<body>
+    <header>
+        <h1>Clube de Sócios</h1>
+    </header>
+    
+    <form action="{{ url_for('cadastrar_socio') }}" method="POST" class="trabalho"onsubmit="return confirm('Tem certeza que deseja cadastrar?')">
+       
+        <label for="nome">Nome do Sócio:</label>
+        <input type="text" name="nome" placeholder="Digite o nome" id="nome" class="input" required>
+
+        <label for="cpf">Digite seu cpf:</label>
+        <input type="text" name="cpf" placeholder="Digite seu cpf" id="cpf" class="input" required>
+
+        <label for="d_nasc">Data De Nascimento:</label>
+        <input type="date" name="d_nasc" placeholder="Digite sua data de Nascimento" id="d_nasc" class="input" required>
+
+        
+
+        <button class="btn1" type="submit" name="Adicionar" id="Adicionar">Cadastrar Sócio</button>
+        <a href="/mostrar_socios">
+        <button class="btn1" type="button" name="Adicionar" id="Adicionar">Mostrar Socios</button>
+        </a>
+        <br>
+        <br>
+        <a href="/consulta_socios">
+            <button class="btn1" type="button" name="ConsultarSocios" id="ConsultarSocios">Consultar Sócios</button>
+        </a>
+        
+    </form>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1">
+        <title>Clube de Sócios</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='Socios.css') }}">
+
+    </head>
+    <body>
+    <div class="container">
+        <div class="page-header">
+            <h1>{{ titulo }}</h1>
+        </div>
+
+            {% block conteudo %}{% endblock %}
+
+        </div>
+    </body>
+</html>

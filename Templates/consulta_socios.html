@@ -1,0 +1,29 @@
+<h1>Consultar Sócios</h1>
+<form action="{{ url_for('consulta_socios') }}" method="POST">
+    <label for="nome_pesquisado">Digite o nome do Sócio:</label>
+    <input type="text" name="nome_pesquisado" placeholder="Digite o nome" id="nome_pesquisado" class="input" required>
+    <button class="btn1" type="submit">Consultar</button>
+</form>
+
+<!-- Adicione os botões -->
+<form action="{{ url_for('consulta_socios') }}" method="POST">
+    <button class="btn1" type="submit" name="consulta_mais_velho">Consultar Sócio Mais Velho</button>
+    <button class="btn1" type="submit" name="consulta_mais_novo">Consultar Sócio Mais Novo</button>
+</form>
+
+{% if socio %}
+    <!-- Exiba as informações do sócio -->
+    <h2>Informações do Sócio</h2>
+    <p>Nome: {{ socio[0] }}</p>
+    <p>CPF: {{ socio[1] }}</p>
+    <p>Data de Nascimento: {{ socio[2] }}</p>
+    <a href="{{ url_for('index') }}">
+        <button class="btn1" type="button" name="Voltar" id="Voltar">Voltar</button>
+    </a>
+{% elif mensagem %}
+    <!-- Exiba a mensagem de nenhum sócio encontrado -->
+    <p>{{ mensagem }}</p>
+    <a href="{{ url_for('index') }}">
+        <button class="btn1" type="button" name="Voltar" id="Voltar">Voltar</button>
+    </a>
+{% endif %}

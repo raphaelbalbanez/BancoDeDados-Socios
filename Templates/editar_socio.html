@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Sócio</title>   
+    <link rel="stylesheet" type="text/css" href="editar_socio.css"> 
+</head>
+<body>
+    <h1>Editar Sócio</h1>
+    <form action="{{ url_for('editar_socio', cpf=socio[1]) }}" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" value="{{ socio[0] }}" required>
+
+        <label for="d_nasc">Data de Nascimento:</label>
+        <input type="date" name="d_nasc" value="{{ socio[2] }}" required>
+
+        <button type="submit">Salvar Alterações</button>
+    </form>
+</body>
+</html>

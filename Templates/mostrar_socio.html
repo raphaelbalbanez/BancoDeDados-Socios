@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<body>
+    <form action="{{ url_for('mostrar_socio') }}" method="GET">
+        <label for="filter_age">Filtrar por idade:</label>
+        <input type="number" name="filter_age" id="filter_age" placeholder="Idade desejada">
+        <button type="submit">Filtrar</button>
+    </form>
+    <h1>Lista de Sócios</h1>
+    <table border="1">
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Data de Nascimento</th>
+        </tr>
+        {% for socio in socios %}
+            <tr>
+                <td>{{ socio[0] }}</td> <!-- Nome -->
+                <td>{{ socio[1] }}</td> <!-- CPF -->
+                <td>{{ socio[2] }}</td> <!-- Data de Nascimento -->
+                <td>
+                    <form action="{{ url_for('deletar_socio', cpf=socio[1]) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja deletar?')">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit">Deletar</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="{{ url_for('editar_socio', cpf=socio[1]) }}" method="GET">
+                        <button type="submit">Editar</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        <a href="/">
+            <button class="btn1" type="button" name="Adicionar" id="Adicionar">Voltar</button>
+            </a>
+    </table>
+</body>
+</html>
+{% endblock %}

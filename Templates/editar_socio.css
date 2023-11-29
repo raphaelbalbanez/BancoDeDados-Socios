@@ -1,0 +1,55 @@
+/* Estilizando o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Estilizando o contêiner do formulário */
+form {
+    width: 50%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizando o título da página */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Estilizando as etiquetas do formulário */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Estilizando os campos de entrada do formulário */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #bb0c0c;
+    border-radius: 4px;
+}
+
+/* Estilizando o botão de envio do formulário */
+button {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Mudando a cor do botão quando o mouse passa por cima */
+button:hover {
+    background-color: #45a049;
+}

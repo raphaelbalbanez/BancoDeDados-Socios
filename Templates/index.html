@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<form action="{{ url_for('index') }}" method="post"></form>
+    
+<body>
+    <header>
+        <h1>Clube de Sócios</h1>
+        <div class="opcao-ingressos" onclick="mostrarTelaCompra()">
+            Ingressos
+            <div class="menu-ingressos">
+                <div class="menu-ingressos-item">Comprar</div>
+            </div>
+        </div>
+    </header>
+    <div id="conteudoInicial">
+        <form action="SUBMIT" method="POST" class="trabalho" ></form>
+            <label for="socio">Digite seu nome:</label>
+            <input type="text" name="socio" placeholder="Digite o nome" id="socio" class="input" required>
+
+            <label for="cpf">Digite seu cpf:</label>
+            <input type="text" name="cpf" placeholder="Digite seu cpf" id="cpf" class="input" required>
+
+            <label for="data_nasc">Data De Nascimento:</label>
+            <input type="date" name="data_nasc" placeholder="Digite sua data de Nascimento" id="data_nasc" class="input" required>
+
+        </form>
+        <button class="btn1" type="submit" name="Adicionar" id="Adicionar">Cadastrar Sócio</button>
+        <ul id="listaSocios"></ul>
+    </div>
+</body>
+</html>
+{% endblock %}
